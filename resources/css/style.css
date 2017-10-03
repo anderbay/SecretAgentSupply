@@ -57,27 +57,31 @@ h2 {
 nav {
   width: 100%;
   background-color: firebrick;
-  display: flex;
 }
 
 .nav_container {
   width: 960px;
-  display: inline-flex;
   margin: 0 auto;
-  justify-content: space-between;
 }
 
-nav li {
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.desktop li {
   display: inline-flex;
   padding: 0.75rem 0;
 }
 
-nav a {
+.desktop a {
   text-decoration: none;
   color: white;
 }
 
-.mobile-nav {
+.mobile {
   display: none;
 }
 
@@ -160,34 +164,43 @@ footer p {
 
 @media only screen and (max-width: 1024px) {
 
-h2 {
-  font-size: 1.5rem;
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+  }
+
+  .product.glasses {
+    display: none;
+  }
+
+  .product {
+     min-width: 47%;
+   }
+
+  .desktop {
+      display: none;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile li {
+    display: inline-flex;
+    padding: 0.75rem 0;
+  }
+
+  .mobile a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
-h3 {
-  font-size: 0.75rem;
-}
+@media only screen and (max-width: 470px) {
 
-.product.glasses {
-  display: none;
-}
-
-.product {
-   width: 47%;
- }
-
-.mobile-nav {
-  display: block;
-  text-align: center;
-  width: 100%;
-  background-color: firebrick;
-}
-
-.nav_container {
-  width: 960px;
-  display: inline-flex;
-  margin: 0 auto;
-  justify-content: space-between;
-}
 
 }
